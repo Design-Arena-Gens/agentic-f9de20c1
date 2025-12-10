@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply min-h-screen bg-midnight text-white antialiased;
+  background-image:
+    radial-gradient(circle at top left, rgba(51, 154, 240, 0.35), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(116, 192, 252, 0.25), transparent 40%),
+    linear-gradient(160deg, rgba(10, 28, 58, 0.8), rgba(10, 8, 24, 0.95));
+}
+
+.aurora-glow {
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(116, 192, 252, 0.25),
+    transparent 60%
+  );
+  filter: blur(80px);
+}
+
+.glass-panel {
+  backdrop-filter: blur(22px);
+  background: linear-gradient(
+      160deg,
+      rgba(11, 18, 33, 0.85),
+      rgba(6, 21, 48, 0.9)
+    );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.grid-overlay {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.85), transparent 80%);
+  pointer-events: none;
+}
